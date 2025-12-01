@@ -1,0 +1,19 @@
+# 不需要上传的文件夹
+public/
+node_modules/
+.deploy*/
+.github/
+
+# Hexo 缓存文件
+db.json
+
+# 日志
+*.log
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+
+# IDE 设置
+.vscode/
+.idea/

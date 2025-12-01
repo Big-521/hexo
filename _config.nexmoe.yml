@@ -1,0 +1,162 @@
+# 网站基础设置
+avatar: /images/logo.jpg        # 网站 Logo
+background:                     # 博客背景及文章默认头图
+  path: https://imageurl.kuri.ink/images/logo.png
+  width: 1280
+  height: 726
+favicon:
+  href: /favicon.ico            # 网站图标
+  type: image/x-icon            # 图标类型 (image/png, image/vnd.microsoft.icon, image/x-icon, image/gif)
+
+# 功能开关
+function:
+  globalToc: true               # 自动生成文章 TOC
+  wordCount: false              # 文章字数统计
+  copyCode: true                # 允许复制代码块
+
+# 图片 CDN 配置
+imageCDN:
+  enable: false                 # 是否开启图片 CDN
+  origin: /../../images/        # 图片原始目录
+  to: https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/ # CDN 域名
+
+# 自定义样式
+customStyles:
+  - custom.css                  # 可在 source 文件夹下新建 custom.css
+
+# 附加图标库
+iconlib: //at.alicdn.com/t/c/font_5072468_u5zojahqgl.css
+
+# 菜单配置
+menu:
+  回到首页:
+    - /
+    - iconfont icon-shouye
+  Me & Blog:
+    - /aboutme
+    - iconfont icon-me
+  友情链接:
+    - /links
+    - iconfont icon-youqinglianjie
+  请杯咖啡:
+    - /tip
+    - iconfont icon-1
+
+# 小工具（Widgets）
+widgets:
+  - name: search
+    display_name: 搜索
+    enable: true
+    options:
+      placeholder: 搜索
+      search:
+        type: engine            # 可选 engine、swiftype、local
+        url: https://cn.bing.com/search?q=
+        id: <swiftype-id>
+  - name: social
+    enable: true
+    options:
+      social:
+        哔哩哔哩:
+          - https://space.bilibili.com/690934177
+          - icon-bilibili
+          - rgb(231, 106, 141)
+          - rgba(231, 106, 141, .1)
+        GitHub:
+          - https://github.com/Big-521/
+          - icon-github
+          - rgb(25, 23, 23)
+          - rgba(25, 23, 23, .1)
+        知乎:
+          - https://www.zhihu.com/people/yanz-33-38
+          - icon-zhihu
+          - rgb(30, 136, 229)
+          - rgba(30, 136, 229, .1)
+        RSS:
+          - http://121.37.132.165:4001/atom.xml
+          - icon-rss
+          - rgb(247, 132, 34)
+          - rgba(247, 132, 34, .1)
+  - name: category
+    enable: true
+  - name: tagcloud
+    enable: true
+    options:
+      maxTagcloud: 17           # 标签云显示数量，0 表示不限制
+  - name: hitokoto
+    enable: false
+    options:
+      widgetHitokoto:
+        loading_placeholder: "🚀 获取中..."
+        loading_error_placeholder: "🐞 获取失败..."
+        category: []
+  - name: archive
+    enable: false
+    options:
+      widgetAchive:
+        archive_type: "year"     # 按年或按月展示
+        show_count: true
+  - name: recent_posts
+    enable: false
+  - name: link
+    enable: false
+    options:
+      widgetLink:
+        - title: 折影轻梦
+          img: https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png
+          link: https://nexmoe.com/
+
+# 复制提示文案
+copyTip: "⚠️ 本文内容禁止未经许可转载。\n引用请注明出处：%url"
+
+# 页头插槽
+slotHead: |
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-4D4ZJ9G024");
+  </script>
+
+# 页脚插槽（可选）
+# slotFooter: |
+#   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+# 侧边栏插槽（可选）
+# slotSidebar: |
+#   <br><a target="_blank" href="https://beian.miit.gov.cn/">鄂ICP备2020018486号</a>
+#   <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+#   <img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a>
+
+# 评论插槽（可选）
+# slotComment: |
+#   <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.css">
+#   <script src="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.js"></script>
+#   <div id="gitalk-container"></div>
+#   <script>
+#     var fixedCallback = 'http://localhost:4001/callback';
+#     Gitalk.prototype._getUrl = function () {
+#       var url = 'https://github.com/login/oauth/authorize';
+#       url += '?client_id=' + this.clientID;
+#       url += '&redirect_uri=' + encodeURIComponent(fixedCallback);
+#       url += '&scope=' + this.scope;
+#       return url;
+#     };
+#     var gitalk = new Gitalk({
+#       clientID: 'Ov23li1m0FY9ISyXi4Fv',
+#       clientSecret: '6cfd7137425314dfb0a6432f187a8f49a48450c9',
+#       repo: 'Comment-Repository',
+#       owner: 'Big-521',
+#       admin: ['Big-521'],
+#       id: location.pathname,
+#       distractionFreeMode: false,
+#       language: 'zh-CN'
+#     });
+#     gitalk.render('gitalk-container');
+#   </script>
+
+# 版权声明插槽
+slotCopyright: |
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
