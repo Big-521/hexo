@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>添加文章后重新部署时需要注意的问题 - Yanz&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="本地运行,确认程序是否有误无误后,进行下一步   本地生成最新的public12hexo cleanhexo g   上传文件删除旧文件 1rm -rf &#x2F;portfolio&#x2F;public  重新上传   停掉旧的服务先查看当前 4001 端口进程： 1lsof -i:4001 找到 PID然后停止它： 1kill PID 确认端口空闲： 1lsof -i:4001 应该没有输出。进入 publi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="添加文章后重新部署时需要注意的问题">
+<meta property="og:url" content="http://121.37.132.165/2025/12/01/%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2%E6%97%B6%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="Yanz&#39;s Blog">
+<meta property="og:description" content="本地运行,确认程序是否有误无误后,进行下一步   本地生成最新的public12hexo cleanhexo g   上传文件删除旧文件 1rm -rf &#x2F;portfolio&#x2F;public  重新上传   停掉旧的服务先查看当前 4001 端口进程： 1lsof -i:4001 找到 PID然后停止它： 1kill PID 确认端口空闲： 1lsof -i:4001 应该没有输出。进入 publi">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-12-01T02:52:38.000Z">
+<meta property="article:modified_time" content="2025-12-02T06:31:24.142Z">
+<meta property="article:author" content="Yanz">
+<meta name="twitter:card" content="summary">
+
+<link rel="stylesheet" href="../../../../lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="../../../../lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="../../../../lib/iconfont/iconfont.css?v=1764657130322">
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_5072468_u5zojahqgl.css">
+
+<link rel="stylesheet" href="../../../../css/style.css?v=1764657130322">
+
+
+
+
+    
+        <link rel="stylesheet" href="../../../../custom.css?v=1764657130322">
+    
+
+
+
+<script src="../../../../lib/mdui_043tiny/mdui.js" async></script>
+<script src="../../../../lib/fancybox/fancybox.umd.js" async></script>
+<script src="../../../../lib/lax.min.js" async></script>
+
+
+<script async src="../../../../js/app.js?v=1764657130322"></script>
+
+ 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="atom.xml" title="Yanz's Blog" type="application/atom+xml">
+</head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(https://imageurl.kuri.ink/images/logo.png)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="../../../../index.html" title="Yanz"><img src="/images/logo.jpg" alt="Yanz"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="../../../../index.html" title="Yanz">
+            <img src="/images/logo.jpg" alt="Yanz" alt="Yanz">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>6</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>2</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../index.html" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-shouye"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../aboutme" title="Me &amp; Blog">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-me"></i>
+            <div class="mdui-list-item-content">
+                Me &amp; Blog
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../links" title="友情链接">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-youqinglianjie"></i>
+            <div class="mdui-list-item-content">
+                友情链接
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../tip" title="请杯咖啡">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-1"></i>
+            <div class="mdui-list-item-content">
+                请杯咖啡
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/690934177"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/Big-521/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.zhihu.com/people/yanz-33-38"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="http://121.37.132.165:4001/atom.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/Categories/作品集/">作品集</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/Categories/博客/">博客</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+    
+        
+        
+        
+        
+   
+    <div class="nexmoe-copyright">
+        &copy; 2025 Yanz
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 48.17708333333333%;">
+            <img src="\images\如何在云服务上部署Hexo\image1.png" alt="添加文章后重新部署时需要注意的问题" loading="lazy">
+            <h1>添加文章后重新部署时需要注意的问题</h1>
+        </div>
+    
+
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2025年12月01日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="../../../../Categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h2 id="本地运行-确认程序是否有误"><a href="#本地运行-确认程序是否有误" class="headerlink" title="本地运行,确认程序是否有误"></a>本地运行,确认程序是否有误</h2><pre><code>无误后,进行下一步
+</code></pre>
+<hr>
+<h2 id="本地生成最新的public"><a href="#本地生成最新的public" class="headerlink" title="本地生成最新的public"></a>本地生成最新的public</h2><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</code></pre>
+<hr>
+<h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><pre><code>删除旧文件
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /portfolio/public</span><br></pre></td></tr></table></figure>
+
+重新上传
+</code></pre>
+<hr>
+<h2 id="停掉旧的服务"><a href="#停掉旧的服务" class="headerlink" title="停掉旧的服务"></a>停掉旧的服务</h2><p>先查看当前 4001 端口进程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:4001</span><br></pre></td></tr></table></figure>
+<p>找到 PID<br>然后停止它：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill PID</span><br></pre></td></tr></table></figure>
+<p>确认端口空闲：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:4001</span><br></pre></td></tr></table></figure>
+<h2 id="应该没有输出。"><a href="#应该没有输出。" class="headerlink" title="应该没有输出。"></a>应该没有输出。</h2><h2 id="进入-public-目录"><a href="#进入-public-目录" class="headerlink" title="进入 public 目录"></a>进入 public 目录</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /portfolio/public</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="用-PM2-启动新的-4001-服务"><a href="#用-PM2-启动新的-4001-服务" class="headerlink" title="用 PM2 启动新的 4001 服务"></a>用 PM2 启动新的 4001 服务</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start &quot;http-server -p 4001 -a 0.0.0.0&quot; --name hexo-blog</span><br></pre></td></tr></table></figure>
+<p>检查是否启动成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 list</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="浏览器访问"><a href="#浏览器访问" class="headerlink" title="浏览器访问"></a>浏览器访问</h2><p>http:&#x2F;&#x2F;你的服务器IP:4001</p>
+
+    
+  </article>
+
+  
+      
+<div class="post-copyright-card">
+    <div class="title">版权声明</div>
+    <div class="content">
+        本文由 <strong>Yanz</strong> 原创发布。禁止未经授权转载。
+    </div>
+</div>
+
+
+  
+
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+</div>
+
+  
+    <script async src="../../../../js/copy-codeblock.js?v=1764657130292"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C-%E7%A1%AE%E8%AE%A4%E7%A8%8B%E5%BA%8F%E6%98%AF%E5%90%A6%E6%9C%89%E8%AF%AF"><span class="toc-number">1.</span> <span class="toc-text">本地运行,确认程序是否有误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E7%94%9F%E6%88%90%E6%9C%80%E6%96%B0%E7%9A%84public"><span class="toc-number">2.</span> <span class="toc-text">本地生成最新的public</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">上传文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%9C%E6%8E%89%E6%97%A7%E7%9A%84%E6%9C%8D%E5%8A%A1"><span class="toc-number">4.</span> <span class="toc-text">停掉旧的服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E8%AF%A5%E6%B2%A1%E6%9C%89%E8%BE%93%E5%87%BA%E3%80%82"><span class="toc-number">5.</span> <span class="toc-text">应该没有输出。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5-public-%E7%9B%AE%E5%BD%95"><span class="toc-number">6.</span> <span class="toc-text">进入 public 目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8-PM2-%E5%90%AF%E5%8A%A8%E6%96%B0%E7%9A%84-4001-%E6%9C%8D%E5%8A%A1"><span class="toc-number">7.</span> <span class="toc-text">用 PM2 启动新的 4001 服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE"><span class="toc-number">8.</span> <span class="toc-text">浏览器访问</span></a></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>

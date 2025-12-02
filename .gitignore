@@ -1,8 +1,7 @@
 # 不需要上传的文件夹
-public/
-node_modules/
-.deploy*/
-.github/
+*                   # 忽略所有文件
+!public/            # 但 public 文件夹除外
+!public/**          # 以及 public 内部所有文件
 
 # Hexo 缓存文件
 db.json
@@ -17,3 +16,5 @@ Thumbs.db
 # IDE 设置
 .vscode/
 .idea/
+
+node_modules/

@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>写作生成器 - Yanz&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="🧪 在线体验   你可以点击下方按钮直接在线体验该项目：         🚀 立即体验      🎬 视频演示 📄 产品需求文档（PRD）写作生成器 PRD（产品需求文档）1. 产品背景与目标随着内容创作需求不断增长，用户希望拥有一个 轻量、高效、可本地运行的写作助手。本项目基于： FastAPI 后端：提供 AI 写作能力（润色&#x2F;扩写&#x2F;续写&#x2F;大纲） Stre">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写作生成器">
+<meta property="og:url" content="http://121.37.132.165/2025/11/26/demo3/index.html">
+<meta property="og:site_name" content="Yanz&#39;s Blog">
+<meta property="og:description" content="🧪 在线体验   你可以点击下方按钮直接在线体验该项目：         🚀 立即体验      🎬 视频演示 📄 产品需求文档（PRD）写作生成器 PRD（产品需求文档）1. 产品背景与目标随着内容创作需求不断增长，用户希望拥有一个 轻量、高效、可本地运行的写作助手。本项目基于： FastAPI 后端：提供 AI 写作能力（润色&#x2F;扩写&#x2F;续写&#x2F;大纲） Stre">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-11-26T08:25:09.000Z">
+<meta property="article:modified_time" content="2025-12-01T02:49:43.499Z">
+<meta property="article:author" content="Yanz">
+<meta name="twitter:card" content="summary">
+
+<link rel="stylesheet" href="../../../../lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="../../../../lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="../../../../lib/iconfont/iconfont.css?v=1764657130325">
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_5072468_u5zojahqgl.css">
+
+<link rel="stylesheet" href="../../../../css/style.css?v=1764657130326">
+
+
+
+
+    
+        <link rel="stylesheet" href="../../../../custom.css?v=1764657130326">
+    
+
+
+
+<script src="../../../../lib/mdui_043tiny/mdui.js" async></script>
+<script src="../../../../lib/fancybox/fancybox.umd.js" async></script>
+<script src="../../../../lib/lax.min.js" async></script>
+
+
+<script async src="../../../../js/app.js?v=1764657130326"></script>
+
+ 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="atom.xml" title="Yanz's Blog" type="application/atom+xml">
+</head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(https://imageurl.kuri.ink/images/logo.png)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="../../../../index.html" title="Yanz"><img src="/images/logo.jpg" alt="Yanz"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="../../../../index.html" title="Yanz">
+            <img src="/images/logo.jpg" alt="Yanz" alt="Yanz">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>6</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>2</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../index.html" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-shouye"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../aboutme" title="Me &amp; Blog">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-me"></i>
+            <div class="mdui-list-item-content">
+                Me &amp; Blog
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../links" title="友情链接">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-youqinglianjie"></i>
+            <div class="mdui-list-item-content">
+                友情链接
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../tip" title="请杯咖啡">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-1"></i>
+            <div class="mdui-list-item-content">
+                请杯咖啡
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/690934177"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/Big-521/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.zhihu.com/people/yanz-33-38"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="http://121.37.132.165:4001/atom.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/Categories/作品集/">作品集</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/Categories/博客/">博客</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+    
+        
+        
+        
+        
+   
+    <div class="nexmoe-copyright">
+        &copy; 2025 Yanz
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 48.17708333333333%;">
+            <img src="/thumbnail/demo3sl.png" alt="写作生成器" loading="lazy">
+            <h1>写作生成器</h1>
+        </div>
+    
+
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2025年11月26日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="../../../../Categories/%E4%BD%9C%E5%93%81%E9%9B%86/">作品集</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h2 id="🧪-在线体验"><a href="#🧪-在线体验" class="headerlink" title="🧪 在线体验"></a>🧪 在线体验</h2><div style="border:1px solid #eaeaea;border-radius:10px;padding:20px;margin:20px 0;background:#fafafa;">
+  <p>你可以点击下方按钮直接在线体验该项目：</p>
+  <a href="http://121.37.132.165:8503/" target="_blank" style="
+     display:inline-block;
+     padding:10px 18px;
+     background:#4caf50;
+     color:white;
+     border-radius:8px;
+     font-size:16px;
+     text-decoration:none;
+     font-weight:bold;">
+     🚀 立即体验
+  </a>
+</div>
+
+<h2 id="🎬-视频演示"><a href="#🎬-视频演示" class="headerlink" title="🎬 视频演示"></a>🎬 视频演示</h2><p><video src="/videos/demo3.mp4" controls autoplay muted style="width:100%;border-radius:10px;"></video></p>
+<h2 id="📄-产品需求文档（PRD）"><a href="#📄-产品需求文档（PRD）" class="headerlink" title="📄 产品需求文档（PRD）"></a>📄 产品需求文档（PRD）</h2><h3 id="写作生成器-PRD（产品需求文档）"><a href="#写作生成器-PRD（产品需求文档）" class="headerlink" title="写作生成器 PRD（产品需求文档）"></a>写作生成器 PRD（产品需求文档）</h3><h3 id="1-产品背景与目标"><a href="#1-产品背景与目标" class="headerlink" title="1. 产品背景与目标"></a>1. 产品背景与目标</h3><p>随着内容创作需求不断增长，用户希望拥有一个 轻量、高效、可本地运行的写作助手。本项目基于：</p>
+<p>FastAPI 后端：提供 AI 写作能力（润色&#x2F;扩写&#x2F;续写&#x2F;大纲）</p>
+<p>Streamlit 前端：提供可视化操作界面，支持会话管理、结果展示</p>
+<p>目标：构建一个简单、易用、本地可运行的 AI 写作助手，帮助用户提升文本质量与创作效率。</p>
+<hr>
+<h3 id="2-整体功能结构"><a href="#2-整体功能结构" class="headerlink" title="2.整体功能结构"></a>2.整体功能结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">AI 写作助手</span><br><span class="line">│</span><br><span class="line">├── 前端（Streamlit）</span><br><span class="line">│   ├── 文本输入框</span><br><span class="line">│   ├── 模式选择（润色/扩写/大纲/续写）</span><br><span class="line">│   ├── 语气选择（自然/正式/口语/学术/情感）</span><br><span class="line">│   ├── 会话管理（session_id）</span><br><span class="line">│   └── 聊天气泡式输出展示</span><br><span class="line">│</span><br><span class="line">└── 后端（FastAPI）</span><br><span class="line">    ├── /session/create：创建新会话</span><br><span class="line">    ├── /generate：生成内容</span><br><span class="line">    └── 会话上下文管理（SESSIONS）</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="3-功能详情"><a href="#3-功能详情" class="headerlink" title="3. 功能详情"></a>3. 功能详情</h3><h4 id="3-1-会话管理"><a href="#3-1-会话管理" class="headerlink" title="3.1 会话管理"></a>3.1 会话管理</h4><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>创建新会话</td>
+<td>后端生成 <code>UUID</code>，用于区分对话上下文</td>
+</tr>
+<tr>
+<td>保存历史消息</td>
+<td>SESSIONS 字典记录 prompt 历史</td>
+</tr>
+<tr>
+<td>持续对话</td>
+<td>前后文关联，生成更连贯的内容</td>
+</tr>
+</tbody></table>
+<p>接口：</p>
+<p>后端：POST &#x2F;session&#x2F;create</p>
+<p>前端：启动时自动请求一次，存入 st.session_state.session_id</p>
+<hr>
+<h4 id="3-2-文本生成（核心功能）"><a href="#3-2-文本生成（核心功能）" class="headerlink" title="3.2 文本生成（核心功能）"></a>3.2 文本生成（核心功能）</h4><p>前端发送参数：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>session_id</td>
+<td>str</td>
+<td>用于定位对话历史</td>
+</tr>
+<tr>
+<td>text</td>
+<td>str</td>
+<td>用户输入文本</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>str</td>
+<td>revise &#x2F; expand &#x2F; outline &#x2F; continue</td>
+</tr>
+<tr>
+<td>tone</td>
+<td>str</td>
+<td>自然、正式、口语、学术、情感</td>
+</tr>
+</tbody></table>
+<p>后端行为：</p>
+<table>
+<thead>
+<tr>
+<th>mode</th>
+<th>行为描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>revise</td>
+<td>润色表达，使语言更自然清晰</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>扩写内容，丰富细节</td>
+</tr>
+<tr>
+<td>outline</td>
+<td>生成结构化大纲</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>续写下文</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="前端-UI-交互流程（Streamlit）"><a href="#前端-UI-交互流程（Streamlit）" class="headerlink" title="前端 UI 交互流程（Streamlit）"></a>前端 UI 交互流程（Streamlit）</h3><h4 id="页面组成"><a href="#页面组成" class="headerlink" title="页面组成"></a>页面组成</h4><ul>
+<li>左侧参数栏<ul>
+<li>模式下拉框</li>
+<li>语气下拉框</li>
+<li>当前会话 ID</li>
+</ul>
+</li>
+<li>右侧写作区<ul>
+<li>输入文本框</li>
+<li>“生成”按钮</li>
+<li>聊天气泡展示历史内容</li>
+</ul>
+</li>
+</ul>
+<h4 id="用户流程"><a href="#用户流程" class="headerlink" title="用户流程"></a>用户流程</h4><ol>
+<li>打开页面自动创建新的 session_id</li>
+<li>用户选择模式 + 语气</li>
+<li>输入文本点击“生成”</li>
+<li>前端发送 POST 请求到 <code>/generate</code></li>
+<li>后端返回 AI 生成结果</li>
+<li>前端追加到气泡消息区域展示</li>
+</ol>
+<hr>
+<h3 id="5-后端-API-设计（FastAPI）"><a href="#5-后端-API-设计（FastAPI）" class="headerlink" title="5.后端 API 设计（FastAPI）"></a>5.后端 API 设计（FastAPI）</h3><h4 id="5-1-POST-session-create"><a href="#5-1-POST-session-create" class="headerlink" title="5.1 POST &#x2F;session&#x2F;create"></a>5.1 POST &#x2F;session&#x2F;create</h4><p>用于创建独立会话。</p>
+<p>响应：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;session_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxxx-xxxx-xxxx&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2-POST-generate"><a href="#5-2-POST-generate" class="headerlink" title="5.2 POST &#x2F;generate"></a>5.2 POST &#x2F;generate</h4><p>输入文本 → 输出 AI 生成内容</p>
+<p>请求示例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;session_id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxx&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;原文内容……&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;mode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;revise&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;tone&quot;</span><span class="punctuation">:</span> <span class="string">&quot;自然、清晰&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>响应示例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;output&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AI 生成后的结果……&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="6-模型能力（基于-Qwen-API）"><a href="#6-模型能力（基于-Qwen-API）" class="headerlink" title="6. 模型能力（基于 Qwen API）"></a>6. 模型能力（基于 Qwen API）</h3><p>系统 Prompt：</p>
+<ul>
+<li>不编造信息</li>
+<li>输出简洁自然</li>
+<li>根据 mode 不同行为</li>
+<li>语气由 <strong><code>tone</code></strong> 控制</li>
+</ul>
+<p>模型：<strong><code>qwen-plus</code></strong></p>
+<hr>
+<h3 id="7-系统架构图"><a href="#7-系统架构图" class="headerlink" title="7. 系统架构图"></a>7. 系统架构图</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Browser</span></span><br><span class="line">  │</span><br><span class="line">  ▼</span><br><span class="line"><span class="title class_">Streamlit</span> 前端（文件<span class="number">6</span>）</span><br><span class="line">  │  <span class="variable constant_">HTTP</span>/<span class="title class_">JSON</span></span><br><span class="line">  ▼</span><br><span class="line"><span class="title class_">FastAPI</span> 后端（文件<span class="number">5</span>）</span><br><span class="line">  │  调用</span><br><span class="line">  ▼</span><br><span class="line"><span class="title class_">Qwen</span> <span class="variable constant_">API</span>（云端）</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="8-错误处理"><a href="#8-错误处理" class="headerlink" title="8. 错误处理"></a>8. 错误处理</h3><p>前端需处理：</p>
+<ul>
+<li>无文本输入 → 禁止提交</li>
+<li>后端返回 500 → 弹出错误提示</li>
+<li>网络错误提醒</li>
+</ul>
+<p>后端需处理：</p>
+<ul>
+<li>空文本</li>
+<li>Qwen API 失败</li>
+<li>session_id 不存在</li>
+</ul>
+<hr>
+<h3 id="9-运行方式"><a href="#9-运行方式" class="headerlink" title="9. 运行方式"></a>9. 运行方式</h3><p><strong>后端</strong></p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uvicorn main:app <span class="comment">--reload</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>前端</strong></p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">streamlit run app.py</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="10-后续可扩展功能"><a href="#10-后续可扩展功能" class="headerlink" title="10. 后续可扩展功能"></a>10. 后续可扩展功能</h3><ul>
+<li>多会话管理（可切换）</li>
+<li>Markdown 导出</li>
+<li>Prompt 模板管理</li>
+<li>本地 LLM 支持（如 Ollama）</li>
+<li>文本差异对比（Diff）</li>
+</ul>
+<hr>
+<h2 id="⬇️-PRD-文档下载"><a href="#⬇️-PRD-文档下载" class="headerlink" title="⬇️ PRD 文档下载"></a>⬇️ PRD 文档下载</h2><div style="border:1px solid #eaeaea;border-radius:10px;padding:20px;margin:20px 0;background:#fafafa;">
+  <p>你可以点击下方按钮打开PRD 文档（PDF）：</p>
+  <a href="/PRD/demo3.pdf" target="_blank" style="
+  display:inline-block;
+  padding:10px 18px;
+  background:#2196f3;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;">
+  📘 点击打开 PRD 文档（PDF）
+</a>
+</div>
+    
+  </article>
+
+  
+      
+<div class="post-copyright-card">
+    <div class="title">版权声明</div>
+    <div class="content">
+        本文由 <strong>Yanz</strong> 原创发布。禁止未经授权转载。
+    </div>
+</div>
+
+
+  
+
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+</div>
+
+  
+    <script async src="../../../../js/copy-codeblock.js?v=1764657130293"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%A7%AA-%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C"><span class="toc-number">1.</span> <span class="toc-text">🧪 在线体验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%AC-%E8%A7%86%E9%A2%91%E6%BC%94%E7%A4%BA"><span class="toc-number">2.</span> <span class="toc-text">🎬 视频演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%84-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%EF%BC%88PRD%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">📄 产品需求文档（PRD）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E4%BD%9C%E7%94%9F%E6%88%90%E5%99%A8-PRD%EF%BC%88%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">写作生成器 PRD（产品需求文档）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BA%A7%E5%93%81%E8%83%8C%E6%99%AF%E4%B8%8E%E7%9B%AE%E6%A0%87"><span class="toc-number">3.2.</span> <span class="toc-text">1. 产品背景与目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%95%B4%E4%BD%93%E5%8A%9F%E8%83%BD%E7%BB%93%E6%9E%84"><span class="toc-number">3.3.</span> <span class="toc-text">2.整体功能结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8A%9F%E8%83%BD%E8%AF%A6%E6%83%85"><span class="toc-number">3.4.</span> <span class="toc-text">3. 功能详情</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86"><span class="toc-number">3.4.1.</span> <span class="toc-text">3.1 会话管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90%EF%BC%88%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD%EF%BC%89"><span class="toc-number">3.4.2.</span> <span class="toc-text">3.2 文本生成（核心功能）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF-UI-%E4%BA%A4%E4%BA%92%E6%B5%81%E7%A8%8B%EF%BC%88Streamlit%EF%BC%89"><span class="toc-number">3.5.</span> <span class="toc-text">前端 UI 交互流程（Streamlit）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E7%BB%84%E6%88%90"><span class="toc-number">3.5.1.</span> <span class="toc-text">页面组成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%B5%81%E7%A8%8B"><span class="toc-number">3.5.2.</span> <span class="toc-text">用户流程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%90%8E%E7%AB%AF-API-%E8%AE%BE%E8%AE%A1%EF%BC%88FastAPI%EF%BC%89"><span class="toc-number">3.6.</span> <span class="toc-text">5.后端 API 设计（FastAPI）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-POST-session-create"><span class="toc-number">3.6.1.</span> <span class="toc-text">5.1 POST &#x2F;session&#x2F;create</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-POST-generate"><span class="toc-number">3.6.2.</span> <span class="toc-text">5.2 POST &#x2F;generate</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%A8%A1%E5%9E%8B%E8%83%BD%E5%8A%9B%EF%BC%88%E5%9F%BA%E4%BA%8E-Qwen-API%EF%BC%89"><span class="toc-number">3.7.</span> <span class="toc-text">6. 模型能力（基于 Qwen API）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE"><span class="toc-number">3.8.</span> <span class="toc-text">7. 系统架构图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="toc-number">3.9.</span> <span class="toc-text">8. 错误处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E8%BF%90%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="toc-number">3.10.</span> <span class="toc-text">9. 运行方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%90%8E%E7%BB%AD%E5%8F%AF%E6%89%A9%E5%B1%95%E5%8A%9F%E8%83%BD"><span class="toc-number">3.11.</span> <span class="toc-text">10. 后续可扩展功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%AC%87%EF%B8%8F-PRD-%E6%96%87%E6%A1%A3%E4%B8%8B%E8%BD%BD"><span class="toc-number">4.</span> <span class="toc-text">⬇️ PRD 文档下载</span></a></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>
