@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>行业知识问答助手 - Yanz&#39;s Blog</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="🧪 在线体验   你可以点击下方按钮直接在线体验该项目：         🚀 立即体验      🎬 视频演示 📄 产品需求文档（PRD）行业知识问答助手 PRD（产品需求文档）1. 产品概述行业知识问答助手是一款基于 FastAPI 后端与 Streamlit 前端实现的文档知识库问答系统。用户可上传行业相关文档，系统会自动解析并向量化入库，随后通过对知识库的检索，实现基于上下文的专业问">
+<meta property="og:type" content="article">
+<meta property="og:title" content="行业知识问答助手">
+<meta property="og:url" content="http://121.37.132.165/2025/11/25/demo1/index.html">
+<meta property="og:site_name" content="Yanz&#39;s Blog">
+<meta property="og:description" content="🧪 在线体验   你可以点击下方按钮直接在线体验该项目：         🚀 立即体验      🎬 视频演示 📄 产品需求文档（PRD）行业知识问答助手 PRD（产品需求文档）1. 产品概述行业知识问答助手是一款基于 FastAPI 后端与 Streamlit 前端实现的文档知识库问答系统。用户可上传行业相关文档，系统会自动解析并向量化入库，随后通过对知识库的检索，实现基于上下文的专业问">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-11-25T05:44:14.000Z">
+<meta property="article:modified_time" content="2025-12-01T02:39:52.269Z">
+<meta property="article:author" content="Yanz">
+<meta name="twitter:card" content="summary">
+
+<link rel="stylesheet" href="../../../../lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="../../../../lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="../../../../lib/iconfont/iconfont.css?v=1764657130336">
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_5072468_u5zojahqgl.css">
+
+<link rel="stylesheet" href="../../../../css/style.css?v=1764657130336">
+
+
+
+
+    
+        <link rel="stylesheet" href="../../../../custom.css?v=1764657130336">
+    
+
+
+
+<script src="../../../../lib/mdui_043tiny/mdui.js" async></script>
+<script src="../../../../lib/fancybox/fancybox.umd.js" async></script>
+<script src="../../../../lib/lax.min.js" async></script>
+
+
+<script async src="../../../../js/app.js?v=1764657130336"></script>
+
+ 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="atom.xml" title="Yanz's Blog" type="application/atom+xml">
+</head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(https://imageurl.kuri.ink/images/logo.png)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="../../../../index.html" title="Yanz"><img src="/images/logo.jpg" alt="Yanz"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="../../../../index.html" title="Yanz">
+            <img src="/images/logo.jpg" alt="Yanz" alt="Yanz">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>6</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>2</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../index.html" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-shouye"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../aboutme" title="Me &amp; Blog">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-me"></i>
+            <div class="mdui-list-item-content">
+                Me &amp; Blog
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../links" title="友情链接">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-youqinglianjie"></i>
+            <div class="mdui-list-item-content">
+                友情链接
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="../../../../tip" title="请杯咖啡">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-1"></i>
+            <div class="mdui-list-item-content">
+                请杯咖啡
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/690934177"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/Big-521/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.zhihu.com/people/yanz-33-38"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="http://121.37.132.165:4001/atom.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/Categories/作品集/">作品集</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/Categories/博客/">博客</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+    
+        
+        
+        
+        
+   
+    <div class="nexmoe-copyright">
+        &copy; 2025 Yanz
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 48.17708333333333%;">
+            <img src="/thumbnail/demo1sl.png" alt="行业知识问答助手" loading="lazy">
+            <h1>行业知识问答助手</h1>
+        </div>
+    
+
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2025年11月25日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="../../../../Categories/%E4%BD%9C%E5%93%81%E9%9B%86/">作品集</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h2 id="🧪-在线体验"><a href="#🧪-在线体验" class="headerlink" title="🧪 在线体验"></a>🧪 在线体验</h2><div style="border:1px solid #eaeaea;border-radius:10px;padding:20px;margin:20px 0;background:#fafafa;">
+  <p>你可以点击下方按钮直接在线体验该项目：</p>
+  <a href="http://121.37.132.165:8501/" target="_blank" style="
+     display:inline-block;
+     padding:10px 18px;
+     background:#4caf50;
+     color:white;
+     border-radius:8px;
+     font-size:16px;
+     text-decoration:none;
+     font-weight:bold;">
+     🚀 立即体验
+  </a>
+</div>
+
+<h2 id="🎬-视频演示"><a href="#🎬-视频演示" class="headerlink" title="🎬 视频演示"></a>🎬 视频演示</h2><p><video src="/videos/demo1.mp4" controls autoplay muted style="width:100%;border-radius:10px;"></video></p>
+<h2 id="📄-产品需求文档（PRD）"><a href="#📄-产品需求文档（PRD）" class="headerlink" title="📄 产品需求文档（PRD）"></a>📄 产品需求文档（PRD）</h2><h3 id="行业知识问答助手-PRD（产品需求文档）"><a href="#行业知识问答助手-PRD（产品需求文档）" class="headerlink" title="行业知识问答助手 PRD（产品需求文档）"></a>行业知识问答助手 PRD（产品需求文档）</h3><h3 id="1-产品概述"><a href="#1-产品概述" class="headerlink" title="1. 产品概述"></a>1. 产品概述</h3><p>行业知识问答助手是一款基于 FastAPI 后端与 Streamlit 前端实现的文档知识库问答系统。用户可上传行业相关文档，系统会自动解析并向量化入库，随后通过对知识库的检索，实现基于上下文的专业问答。</p>
+<p>本系统支持多轮会话、文件入库、知识库检索、智能问答等核心功能。</p>
+<hr>
+<h3 id="2-产品目标"><a href="#2-产品目标" class="headerlink" title="2. 产品目标"></a>2. 产品目标</h3><ul>
+<li>提供一个轻量、可扩展的行业知识库问答解决方案</li>
+<li>支持 PDF &#x2F; DOCX &#x2F; TXT 等多格式文档入库</li>
+<li>支持基于向量检索的精准知识问答</li>
+<li>支持多轮上下文对话，使回答更连贯</li>
+<li>提供简洁易用的 Web 可视化界面</li>
+</ul>
+<hr>
+<h3 id="3-用户角色-使用场景"><a href="#3-用户角色-使用场景" class="headerlink" title="3. 用户角色 &amp; 使用场景"></a>3. 用户角色 &amp; 使用场景</h3><h4 id="●-角色"><a href="#●-角色" class="headerlink" title="● 角色"></a>● 角色</h4><ul>
+<li><strong>行业工程师 &#x2F; 操作员</strong>：需要快速查询行业专业知识</li>
+<li><strong>文档维护人员</strong>：上传行业规范、操作说明</li>
+<li><strong>AI 应用开发者</strong>：需要快速搭建知识问答 Demo</li>
+</ul>
+<h4 id="●-场景"><a href="#●-场景" class="headerlink" title="● 场景"></a>● 场景</h4><ul>
+<li>查询行业规范、标准、流程</li>
+<li>查询项目文档、技术说明书</li>
+<li>自动化 QA 客服测试环境</li>
+<li>企业内部知识库问答入口</li>
+</ul>
+<hr>
+<h3 id="4-产品功能描述"><a href="#4-产品功能描述" class="headerlink" title="4. 产品功能描述"></a>4. 产品功能描述</h3><h4 id="4-1-文档上传与入库"><a href="#4-1-文档上传与入库" class="headerlink" title="4.1 文档上传与入库"></a>4.1 文档上传与入库</h4><p>由 FastAPI <code>/upload</code> 提供服务。</p>
+<h5 id="功能说明"><a href="#功能说明" class="headerlink" title="功能说明"></a>功能说明</h5><ul>
+<li>支持 PDF、DOCX、TXT 3 种文档格式</li>
+<li>自动存储上传文件</li>
+<li>自动解析文档</li>
+<li>按块切分（chunk_size &#x3D; 800, overlap &#x3D; 100）</li>
+<li>使用 DashScope Embedding 进行向量化</li>
+<li>使用 FAISS 本地向量库存储</li>
+</ul>
+<h5 id="上传成功返回"><a href="#上传成功返回" class="headerlink" title="上传成功返回"></a>上传成功返回</h5><ul>
+<li>文件名</li>
+<li>切分块数量</li>
+</ul>
+<hr>
+<h4 id="4-2-知识问答（QA）"><a href="#4-2-知识问答（QA）" class="headerlink" title="4.2 知识问答（QA）"></a>4.2 知识问答（QA）</h4><p>由 FastAPI <code>/qa</code> 提供服务。</p>
+<h5 id="功能说明-1"><a href="#功能说明-1" class="headerlink" title="功能说明"></a>功能说明</h5><ul>
+<li>基于 FAISS 检索最相似的文档片段</li>
+<li>拼接上下文 prompt 进行回答</li>
+<li>多轮对话（按 session_id 维护历史）</li>
+<li>避免幻觉 → 回答严格来源于参考资料</li>
+<li>若资料未包含 → 明确回答“资料中未提及”</li>
+</ul>
+<hr>
+<h4 id="4-3-文件列表"><a href="#4-3-文件列表" class="headerlink" title="4.3 文件列表"></a>4.3 文件列表</h4><p>提供 <code>/files</code> 获取当前已上传文件列表。<br>Streamlit 前端会缓存文件列表并美观展示。</p>
+<hr>
+<h4 id="4-4-Web-可视化界面"><a href="#4-4-Web-可视化界面" class="headerlink" title="4.4 Web 可视化界面"></a>4.4 Web 可视化界面</h4><h5 id="功能模块"><a href="#功能模块" class="headerlink" title="功能模块"></a>功能模块</h5><ul>
+<li>📁 <strong>文档上传区域</strong></li>
+<li>📂 <strong>折叠面板展示已入库文件</strong></li>
+<li>💬 <strong>聊天问答区域（左右气泡样式）</strong></li>
+<li>🧭 <strong>自动维护 session_id 与对话历史</strong></li>
+<li>🚀 <strong>按钮式界面操作</strong></li>
+</ul>
+<h5 id="设计亮点"><a href="#设计亮点" class="headerlink" title="设计亮点"></a>设计亮点</h5><ul>
+<li>气泡式对话框</li>
+<li>简洁配色与清晰布局</li>
+<li>自动刷新文件列表</li>
+<li>使用 UUID 自动维护会话</li>
+</ul>
+<hr>
+<h3 id="5-系统架构"><a href="#5-系统架构" class="headerlink" title="5. 系统架构"></a>5. 系统架构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">┌────────────┐         ┌───────────────┐</span><br><span class="line">│ Streamlit 前端 │ &lt;────→ │ FastAPI 后端 API │</span><br><span class="line">└────────────┘         └───────────────┘</span><br><span class="line">        │                          │</span><br><span class="line">        │                          │</span><br><span class="line">        ↓                          ↓</span><br><span class="line">  用户输入/展示                文件上传解析</span><br><span class="line">                               向量化入库</span><br><span class="line">                               文档检索</span><br><span class="line">                               大模型问答</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="6-API-设计"><a href="#6-API-设计" class="headerlink" title="6. API 设计"></a>6. API 设计</h3><h4 id="●-1）上传文件"><a href="#●-1）上传文件" class="headerlink" title="● 1）上传文件"></a>● 1）上传文件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">POST /upload</span><br><span class="line">Files: List[UploadFile]</span><br></pre></td></tr></table></figure>
+
+<h4 id="●-2）问答接口"><a href="#●-2）问答接口" class="headerlink" title="● 2）问答接口"></a>● 2）问答接口</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">POST /qa</span><br><span class="line">query: str</span><br><span class="line">session_id: str</span><br></pre></td></tr></table></figure>
+
+<h4 id="●-3）文件列表"><a href="#●-3）文件列表" class="headerlink" title="● 3）文件列表"></a>● 3）文件列表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /files</span><br></pre></td></tr></table></figure>
+
+<h4 id="●-4）系统状态"><a href="#●-4）系统状态" class="headerlink" title="● 4）系统状态"></a>● 4）系统状态</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="7-技术栈"><a href="#7-技术栈" class="headerlink" title="7. 技术栈"></a>7. 技术栈</h3><h4 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h4><ul>
+<li>FastAPI</li>
+<li>FAISS</li>
+<li>LangChain</li>
+<li>DashScope Embedding</li>
+<li>Qwen 大模型</li>
+</ul>
+<h4 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h4><ul>
+<li>Streamlit</li>
+<li>requests</li>
+</ul>
+<hr>
+<h3 id="8-性能指标"><a href="#8-性能指标" class="headerlink" title="8. 性能指标"></a>8. 性能指标</h3><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>目标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文档解析速度</td>
+<td>100 页 PDF &lt; 5 秒</td>
+</tr>
+<tr>
+<td>检索延迟</td>
+<td>&lt; 200ms</td>
+</tr>
+<tr>
+<td>单批上传文件数</td>
+<td>≥ 10 个</td>
+</tr>
+<tr>
+<td>多轮会话上下文</td>
+<td>≥ 20 轮</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="9-后续规划"><a href="#9-后续规划" class="headerlink" title="9. 后续规划"></a>9. 后续规划</h3><ul>
+<li>增加 PDF 图片 OCR 能力</li>
+<li>增加 图表解析、Excel 文档解析</li>
+<li>支持在线知识库管理（删除、重建）</li>
+<li>UI 深度优化，增加主题色</li>
+</ul>
+<hr>
+<h2 id="⬇️-PRD-文档下载"><a href="#⬇️-PRD-文档下载" class="headerlink" title="⬇️ PRD 文档下载"></a>⬇️ PRD 文档下载</h2><div style="border:1px solid #eaeaea;border-radius:10px;padding:20px;margin:20px 0;background:#fafafa;">
+  <p>你可以点击下方按钮打开PRD 文档（PDF）：</p>
+  <a href="/PRD/demo1.pdf" target="_blank" style="
+  display:inline-block;
+  padding:10px 18px;
+  background:#2196f3;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;">
+  📘 点击打开 PRD 文档（PDF）
+</a>
+</div>
+    
+  </article>
+
+  
+      
+<div class="post-copyright-card">
+    <div class="title">版权声明</div>
+    <div class="content">
+        本文由 <strong>Yanz</strong> 原创发布。禁止未经授权转载。
+    </div>
+</div>
+
+
+  
+
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+</div>
+
+  
+    <script async src="../../../../js/copy-codeblock.js?v=1764657130293"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%A7%AA-%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C"><span class="toc-number">1.</span> <span class="toc-text">🧪 在线体验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%AC-%E8%A7%86%E9%A2%91%E6%BC%94%E7%A4%BA"><span class="toc-number">2.</span> <span class="toc-text">🎬 视频演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%84-%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%EF%BC%88PRD%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">📄 产品需求文档（PRD）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E4%B8%9A%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%E5%8A%A9%E6%89%8B-PRD%EF%BC%88%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">行业知识问答助手 PRD（产品需求文档）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BA%A7%E5%93%81%E6%A6%82%E8%BF%B0"><span class="toc-number">3.2.</span> <span class="toc-text">1. 产品概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BA%A7%E5%93%81%E7%9B%AE%E6%A0%87"><span class="toc-number">3.3.</span> <span class="toc-text">2. 产品目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%94%A8%E6%88%B7%E8%A7%92%E8%89%B2-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">3.4.</span> <span class="toc-text">3. 用户角色 &amp; 使用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%97%8F-%E8%A7%92%E8%89%B2"><span class="toc-number">3.4.1.</span> <span class="toc-text">● 角色</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%97%8F-%E5%9C%BA%E6%99%AF"><span class="toc-number">3.4.2.</span> <span class="toc-text">● 场景</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BA%A7%E5%93%81%E5%8A%9F%E8%83%BD%E6%8F%8F%E8%BF%B0"><span class="toc-number">3.5.</span> <span class="toc-text">4. 产品功能描述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-%E6%96%87%E6%A1%A3%E4%B8%8A%E4%BC%A0%E4%B8%8E%E5%85%A5%E5%BA%93"><span class="toc-number">3.5.1.</span> <span class="toc-text">4.1 文档上传与入库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E"><span class="toc-number">3.5.1.1.</span> <span class="toc-text">功能说明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%88%90%E5%8A%9F%E8%BF%94%E5%9B%9E"><span class="toc-number">3.5.1.2.</span> <span class="toc-text">上传成功返回</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94%EF%BC%88QA%EF%BC%89"><span class="toc-number">3.5.2.</span> <span class="toc-text">4.2 知识问答（QA）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E-1"><span class="toc-number">3.5.2.1.</span> <span class="toc-text">功能说明</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-%E6%96%87%E4%BB%B6%E5%88%97%E8%A1%A8"><span class="toc-number">3.5.3.</span> <span class="toc-text">4.3 文件列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-Web-%E5%8F%AF%E8%A7%86%E5%8C%96%E7%95%8C%E9%9D%A2"><span class="toc-number">3.5.4.</span> <span class="toc-text">4.4 Web 可视化界面</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97"><span class="toc-number">3.5.4.1.</span> <span class="toc-text">功能模块</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E4%BA%AE%E7%82%B9"><span class="toc-number">3.5.4.2.</span> <span class="toc-text">设计亮点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"><span class="toc-number">3.6.</span> <span class="toc-text">5. 系统架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-API-%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.7.</span> <span class="toc-text">6. API 设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%97%8F-1%EF%BC%89%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6"><span class="toc-number">3.7.1.</span> <span class="toc-text">● 1）上传文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%97%8F-2%EF%BC%89%E9%97%AE%E7%AD%94%E6%8E%A5%E5%8F%A3"><span class="toc-number">3.7.2.</span> <span class="toc-text">● 2）问答接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%97%8F-3%EF%BC%89%E6%96%87%E4%BB%B6%E5%88%97%E8%A1%A8"><span class="toc-number">3.7.3.</span> <span class="toc-text">● 3）文件列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%97%8F-4%EF%BC%89%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81"><span class="toc-number">3.7.4.</span> <span class="toc-text">● 4）系统状态</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="toc-number">3.8.</span> <span class="toc-text">7. 技术栈</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF"><span class="toc-number">3.8.1.</span> <span class="toc-text">后端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF"><span class="toc-number">3.8.2.</span> <span class="toc-text">前端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="toc-number">3.9.</span> <span class="toc-text">8. 性能指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E5%90%8E%E7%BB%AD%E8%A7%84%E5%88%92"><span class="toc-number">3.10.</span> <span class="toc-text">9. 后续规划</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%AC%87%EF%B8%8F-PRD-%E6%96%87%E6%A1%A3%E4%B8%8B%E8%BD%BD"><span class="toc-number">4.</span> <span class="toc-text">⬇️ PRD 文档下载</span></a></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>
